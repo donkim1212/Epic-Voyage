@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# But descend into directories
+!*/
+
+# Recursively allow files under Asset/_Scripts
+!/Assets/_Scripts/**
+!/Assets/Shaders/**
+
+# You can be specific with these rules
+!.gitignore
