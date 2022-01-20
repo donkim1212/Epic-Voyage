@@ -29,8 +29,13 @@ public class DebugSystem : MonoBehaviour
     // }
 
     public static void MountMessage(string message, bool clear) {
-        if (clear) sb.Clear();
-        sb.Append(message);
-        text.text = sb.ToString();
+        try {
+            if (clear) sb.Clear();
+            sb.Append(message);
+            text.text = sb.ToString();
+        } catch (Exception e) {
+            Debug.Log(e.Message + e.StackTrace);
+        }
+        
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PerlinWave2D : MonoBehaviour
+public class PerlinWave2Dim : MonoBehaviour
 {
     [Range(0.1f, 20.0f)]
     public float heightScale = 5.0f;

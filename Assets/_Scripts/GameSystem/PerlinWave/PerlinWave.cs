@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class PerlinWave : MonoBehaviour
 {
     [Range(0.1f, 20.0f)]
-    public float heightScale = 5.0f;
+    public float amplitude = 5.0f;
     [Range(0.1f, 40.0f)]
     public float detailScale = 5.0f;
 
@@ -12,7 +12,9 @@ public abstract class PerlinWave : MonoBehaviour
     // protected Vector3[] vertices;
 
     public bool waves = false;
-    public float waveSpeed = 5.0f;
+    public bool random_seed = true;
+    protected float rnd;
+    public float wavelength = 5.0f;
     public bool collider_on;
 
     protected void Update()

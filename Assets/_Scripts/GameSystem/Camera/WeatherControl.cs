@@ -13,9 +13,9 @@ public class WeatherControl : MonoBehaviour
     private Color[] light_color = {
         new Color(1f, 1f, 1f),
         new Color(155 / 255f, 155 / 255f, 155 / 255f),
-        new Color(235 / 255f, 100 / 255f, 165 / 255f),
-        new Color(102 / 255f, 108 / 255f, 231 / 255f),
-        new Color(180 / 255f, 100 / 255f, 30 / 255f)
+        new Color(253 / 255f, 156 / 255f, 203 / 255f),
+        new Color(125 / 255f, 127 / 255f, 190 / 255f),
+        new Color(193 / 255f, 130 / 255f, 76 / 255f)
     };
 
     void Awake() {

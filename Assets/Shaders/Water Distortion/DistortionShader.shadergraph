@@ -7,6 +7,9 @@
             "m_Id": "6ac1253242bd4421be903fc8e1f81f26"
         },
         {
+            "m_Id": "a754b486b15447d49ee8010c1e1480e4"
+        },
+        {
             "m_Id": "112d730dc25640b7a25149049fb1d618"
         },
         {
@@ -122,6 +125,9 @@
         },
         {
             "m_Id": "f2cc47fecc8848fc8ed9ccbc2e37a078"
+        },
+        {
+            "m_Id": "9f33818e1bf94154835ba3943f2873c8"
         }
     ],
     "m_GroupDatas": [
@@ -329,6 +335,20 @@
                     "m_Id": "48fc0ab199f3450fae3950873b3ebdab"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "9f33818e1bf94154835ba3943f2873c8"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "c8f5c8c411234634bdf20b71a3889208"
+                },
+                "m_SlotId": 1
             }
         },
         {
@@ -1522,6 +1542,27 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
+    "m_ObjectId": "5235a5199f384aad8e0e45951adf5651",
+    "m_Id": 0,
+    "m_DisplayName": "Texture Tile",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "58de91ef2d28401da042693606224fbe",
     "m_Group": {
@@ -2637,6 +2678,64 @@
         "m_SerializableColors": []
     },
     "m_SerializedDescriptor": "SurfaceDescription.Emission"
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "9f33818e1bf94154835ba3943f2873c8",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -1157.0,
+            "y": -19.000001907348634,
+            "width": 139.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "5235a5199f384aad8e0e45951adf5651"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "a754b486b15447d49ee8010c1e1480e4"
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector2ShaderProperty",
+    "m_ObjectId": "a754b486b15447d49ee8010c1e1480e4",
+    "m_Guid": {
+        "m_GuidSerialized": "f73ed985-54b2-4bf6-89a3-f68fa0a2dd4f"
+    },
+    "m_Name": "Texture Tile",
+    "m_DefaultReferenceName": "Vector2_a754b486b15447d49ee8010c1e1480e4",
+    "m_OverrideReferenceName": "_TextureTile",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 1.0,
+        "y": 1.0,
+        "z": 0.0,
+        "w": 0.0
+    }
 }
 
 {
