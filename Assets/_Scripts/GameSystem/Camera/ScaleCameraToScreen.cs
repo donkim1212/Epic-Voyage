@@ -13,7 +13,10 @@ public class ScaleCameraToScreen : MonoBehaviour {
     Vector3 cameraPos;
     float offset;
 
+    
+
     private void Start() {
+        
         cameraPos = Camera.main.transform.position;
         offset = Camera.main.transform.position.y;
         defaultHeight = Camera.main.orthographicSize;
@@ -22,6 +25,12 @@ public class ScaleCameraToScreen : MonoBehaviour {
     }
 
     private void Update() {
+        Rescale();
+        // Debug.Log("orthoSize = " + Camera.main.orthographicSize);
+        // Debug.Log("aspect = " + Camera.main.aspect);
+    }
+
+    private void Rescale() {
         if (maintainWidth) {
             Camera.main.orthographicSize = defaultWidth / Camera.main.aspect;
             Camera.main.transform.position
