@@ -21,14 +21,16 @@ public class WeatherControl : MonoBehaviour
     void Awake() {
         // if (Application.platform == RuntimePlatform.Android) use_local_skybox = true;
         skybox = GetComponent<Skybox>();
+        // RenderSettings.skybox = sb_materials[0];
+
         SetWeather(Weather.Midday);
-        DebugSystem.MountMessage((use_local_skybox + " / " + Weather.Midday), false);
-        // RenderSettings.skybox = sb_materials[GameOptions.GetSkyboxTime()];
+        // DebugSystem.MountMessage((use_local_skybox + " / " + Weather.Midday), false);
     }
 
     void FixedUpdate() {
         if (use_local_skybox) {
-            skybox.transform.rotation = Quaternion.Euler(0f, degrees_per_sec * Time.time, 0f);
+            // skybox.transform.rotation = Quaternion.Euler(0f, degrees_per_sec * Time.time, 0f);
+            skybox.material.SetFloat("_Rotation", degrees_per_sec * Time.time);
         }
         else {
             RenderSettings.skybox.SetFloat("_Rotation", degrees_per_sec * Time.time);
