@@ -8,7 +8,8 @@ public class ShipController : MonoBehaviour
     private GameObject sp_d;
     [SerializeField]
     private GameObject player;
-    private Vector3 move_vector = new Vector3(0.1f, 0, 0);
+    [SerializeField]
+    private Vector3 move_vector = new Vector3(0.01f, 0, 0);
 
     void Awake() {
         player = sp_d.transform.GetChild(0).gameObject;
