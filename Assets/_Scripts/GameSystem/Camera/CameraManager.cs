@@ -16,6 +16,9 @@ public class CameraManager : MonoBehaviour
     
     private float default_screen_ratio; // width / height
     private float y_offset = 0;
+    private float mapWidth_halved;
+    private float camWidth_halved;
+    private float cam_max_x;
 
     void Start()
     {
@@ -23,6 +26,11 @@ public class CameraManager : MonoBehaviour
             target = target.transform.GetChild(0).gameObject;
             Init();
             Rescale();
+            mapWidth_halved = GameManager.GetMapWidth() / 2f;
+            Debug.Log("mapWidth/2 = " + mapWidth_halved);
+            camWidth_halved = default_cam_width / 2f;
+            Debug.Log("camWidth/2 = " + camWidth_halved);
+            cam_max_x = mapWidth_halved - camWidth_halved;
         } catch (Exception e) {
             Debug.Log(e.Message + e.StackTrace);
         }
@@ -31,7 +39,7 @@ public class CameraManager : MonoBehaviour
     void FixedUpdate() {
         // Recalculate();
         // Rescale();
-        Follow();
+        // Follow();
     }
 
     void Init() {
@@ -55,11 +63,17 @@ public class CameraManager : MonoBehaviour
     }
 
     void Follow() {
+        // ValidateTargetPositionX();
         cam.transform.position = Vector3.Lerp(
             cam.transform.position,
             new Vector3(target.transform.position.x, target.transform.position.y + y_offset, cam.transform.position.z),
             2 * Time.deltaTime
         );
+    }
+
+    private float ValidateTargetPositionX(float x) {
+        
+        return x;
     }
     
 }
